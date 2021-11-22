@@ -1,0 +1,64 @@
+.team {
+  padding: 118px 0 122px;
+  background: #ffffff;
+}
+
+.team_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px 15px;
+  margin-top: 124px;
+}
+
+.team_item {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .team_item_info {
+      display: block;
+    }
+  }
+}
+
+.team_item_info {
+  color: rgba(0, 0, 0, 0.8);
+  background: #6ff6eb;
+  padding: 40px 50px 40px 35px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
+  display: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    border: 20px solid transparent;
+    border-bottom: 20px solid #6ff6eb;
+  }
+}
+
+.team_item_name {
+  font-size: 20px;
+  color: rgba(39, 39, 39, 0.949);
+  font-family: "MyriadPRO-Bold";
+  span {
+    font-style: italic;
+    color: #767877;
+    font-family: "MyriadPRO-Regular";
+  }
+}
+
+.team_item_text {
+  margin: 28px 0;
+}
+
+.team_item_list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 17px;
+}
